@@ -8,12 +8,24 @@
   </head>
 
   <body>
+    <div class="test">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, eum.
+      Animi fuga dolorum fugiat eum inventore iste soluta tempore. Reiciendis
+      autem, laboriosam ipsum aliquid amet totam at dolorum voluptatum saepe.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam laborum
+      corporis laboriosam. Molestias velit ex rem vitae consectetur nam dolorem,
+      commodi cumque atque culpa a soluta provident magnam, esse similique.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+      veritatis similique laboriosam id consectetur autem tempora voluptas
+      inventore nesciunt, quasi assumenda voluptates voluptatem! Maxime ducimus
+      tenetur exercitationem, distinctio dicta obcaecati.
+    </div>
     <div class="circle"></div>
     <script>
       var circle = document.querySelector(".circle");
       document.addEventListener("mousemove", function (e) {
-        circle.style.top = e.pageY;
-        circle.style.left = e.pageX;
+        circle.style.top = e.pageY - 75;
+        circle.style.left = e.pageX - 75;
       });
     </script>
   </body>

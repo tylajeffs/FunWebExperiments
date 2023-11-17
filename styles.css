@@ -4,16 +4,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
   position: relative;
 }
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background-color: green;
   position: absolute;
   z-index: 10;
   top: 0;
   left: 0;
+  box-shadow: 0 0 0 9999px black;
+}
+.test {
+  background-color: bisque;
+  height: 100%;
+  width: 300px;
 }
