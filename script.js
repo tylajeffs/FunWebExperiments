@@ -14,3 +14,15 @@ const isTouchDevice = () => {
 };
 
 console.log(isTouchDevice());
+
+function getMousePosition(e) {
+  //get the mouse position
+  mouseX = !isTouchDevice() ? e.pageX : e.touches[0].pageX;
+  mouseY = !isTouchDevice() ? e.pageY : e.touches[0].pageY;
+  //set the flashlight to the mouse position
+  flashlight.style.setProperty("--Xpos", mouseX + "px");
+  flashlight.style.setProperty("--Ypos", mouseY + "px");
+}
+
+document.addEventListener("mousemove", getMousePosition);
+document.addEventListener("touchmove", getMousePosition);
