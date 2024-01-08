@@ -29,31 +29,29 @@ var currentGuess;
 
 //array to hold all guessed dates
 const datesGuessed = [];
+const earlierDates = [];
+const laterDates = [];
 
 function loading() {
   // code to execute on the page load
   start = "01-01-0001";
   end = "12-12-5000";
   currentGuess = randomDate(start, end);
-
-  console.log(currentGuess);
   console.log("we have loaded");
 }
 
 //if earlier button is clicked, update value of end and add previous guess to array
 function earlierDate() {
-  console.log(currentGuess);
-  datesGuessed.push(currentGuess);
+  earlierDates.push(currentGuess);
   end = currentGuess;
   currentGuess = randomDate(start, end);
-  document.getElementById("guesses").innerHTML = datesGuessed.toString();
+  document.getElementById("earlierDates").innerHTML = earlierDates.join("<br>");
 }
 
 //if later button is clicked, update value of start and add previous guess to array
 function laterDate() {
-  datesGuessed.push(currentGuess);
+  laterDates.push(currentGuess);
   start = currentGuess;
   currentGuess = randomDate(start, end);
-  document.getElementById("guesses").innerHTML = datesGuessed.toString();
-  console.log(datesGuessed);
+  document.getElementById("laterDates").innerHTML = laterDates.join("<br>");
 }
